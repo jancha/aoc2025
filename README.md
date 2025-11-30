@@ -37,10 +37,18 @@ For each day copy this simple template and implement solver method (and update C
 
 This will automatically let you use:
 
-    cargo run --release #to run solver against input_puzzle1.txt which is expected default input
+A. Run solver against input_puzzle1.txt which is expected default input
 
-    cargo run --release input=* #to run solver against specific input
+    cargo run --release
 
-    cargo run --release input=* bench=100 #to run benchmarking feature for specific input
+B. Run solver against input_puzzle1.txt which is expected default input
 
-    cargo test -- --nocapture #to run all available tests
+    cargo run --release input=input_puzzle2.txt
+
+C. Run benchmarking feature for specific input
+
+    cargo run --release input=input_puzzle1.txt bench=100
+
+D. run all available tests
+
+    cargo test -- --nocapture

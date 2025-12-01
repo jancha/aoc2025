@@ -54,7 +54,7 @@ D. run all available tests
     cargo test -- --nocapture
 
 
-#Performance#
+## Performance
 
 |Day |Puzzle |Average time|
 |----|-------|------------|

@@ -3,7 +3,7 @@ use std::fs;
 
 pub fn solver(file_path: &str) -> Result<String> {
     let input = fs::read_to_string(file_path).expect("Could not read input file");
-    let mut left_count = 0;
+    let mut zero_count = 0;
     let mut pos: isize = 50;
     for i in input.lines() {
         let dir = &i[0..1];
@@ -19,10 +19,10 @@ pub fn solver(file_path: &str) -> Result<String> {
             pos = 100 + pos % 100;
         }
         if pos == 0 {
-            left_count += 1;
+            zero_count += 1;
         }
     }
-    Ok(format!("{left_count}"))
+    Ok(format!("{zero_count}"))
 }
 
 fn main() {

@@ -3,6 +3,18 @@ use std::fs;
 
 pub type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
 
+#[derive(Debug)]
+pub enum AOCError {
+    String(String),
+}
+impl std::fmt::Display for AOCError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{:?}", self)
+    }
+}
+
+impl std::error::Error for AOCError {}
+
 pub fn main<T: Fn(&str) -> Result<String>>(solver: T) {
     let args: Vec<_> = env::args().collect();
 
@@ -23,7 +35,8 @@ pub fn main<T: Fn(&str) -> Result<String>>(solver: T) {
             solver(&input).expect("Failed to compute the result");
         });
     } else {
-        solver(&input).expect("Failed to compute the result");
+        let r = solver(&input).expect("Failed to compute the result");
+        println!("{r}");
     }
 }
 

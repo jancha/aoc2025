@@ -1,5 +1,5 @@
 [package]
-name = "dayX"
+name = "day1-2"
 version = "0.1.0"
 edition = "2024"
 
@@ -9,5 +9,5 @@ codegen-units = 1
 lto = true  
 
 [dependencies]
-bench = {path="../bench"}
-aoc = {path="../aoc"}
+bench = {path="../../bench"}
+aoc = {path="../../aoc"}

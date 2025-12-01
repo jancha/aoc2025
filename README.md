@@ -52,3 +52,14 @@ C. Run benchmarking feature for specific input
 D. run all available tests
 
     cargo test -- --nocapture
+
+
+#Performance#
+
+|Day |Puzzle |Average time|
+|----|-------|------------|
+|Day1|Puzzle1|0.055ms     |
+|Day1|Puzzle2|0.056ms     |
+
+*Total: 0.111ms*
+

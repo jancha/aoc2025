@@ -56,10 +56,12 @@ D. run all available tests
 
 ## Performance
 
-|Day |Puzzle |Average time|
-|----|-------|------------|
-|Day1|Puzzle1|0.055ms     |
-|Day1|Puzzle2|0.056ms     |
+|Day |Puzzle | Average time |
+|----|-------|--------------|
+|Day1|Puzzle1|  0.055ms     |
+|Day1|Puzzle2|  0.056ms     |
+|Day2|Puzzle1|  3.780ms     |
+|Day2|Puzzle2| 10.590ms     |
 
-*Total: 0.111ms*
+*Total: 14.481ms*
 

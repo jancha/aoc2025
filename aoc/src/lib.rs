@@ -18,7 +18,7 @@ impl std::error::Error for AOCError {}
 pub fn main<T: Fn(&str) -> Result<String>>(solver: T) {
     let args: Vec<_> = env::args().collect();
 
-    let default_input = "input_puzzle1.txt";
+    let default_input = "input.txt";
 
     let input = if let Some(x) = args.iter().find(|x| x.starts_with("input")) {
         let s = x.split("=").collect::<Vec<&str>>();

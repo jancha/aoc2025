@@ -24,3 +24,7 @@ target
 #AOC
 input*.txt
 output*.txt
+
+
+#mac
+.DS_Store

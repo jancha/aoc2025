@@ -20,15 +20,11 @@ fn get_max(cells: &Vec<u32>, start: usize, cell_count: usize) -> u64 {
         start,
         (cells.len() - cell_count).max(start).min(cells.len() - 1),
     );
-
-    let mut next_max_joltage = 0;
-    let joltage = 10_u64.pow(cell_count as u32 - 1) * next_max as u64;
-
+    let mut joltage = 10_u64.pow(cell_count as u32 - 1) * next_max as u64;
     if cell_count > 1 {
-        let sub_joltage = get_max(cells, next_max_pos + 1, cell_count - 1);
-        next_max_joltage = next_max_joltage.max(sub_joltage);
+        joltage += get_max(cells, next_max_pos + 1, cell_count - 1);
     }
-    joltage + next_max_joltage
+    joltage
 }
 
 fn get_next_max(cells: &[u32], start: usize, end: usize) -> (u32, usize) {

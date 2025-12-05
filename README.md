@@ -66,5 +66,7 @@ D. run all available tests
 |Day3|Puzzle2|  0.090ms     |
 |Day4|Puzzle1|  0.087ms     |
 |Day4|Puzzle2|  1.900ms     |
-*Total: 16.638ms*
+|Day5|Puzzle1|  0.103ms     |
+|Day5|Puzzle2|  0.076ms     |
+*Total: 16.817ms*
 

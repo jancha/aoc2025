@@ -6,13 +6,7 @@ pub fn solver(file_path: &str) -> Result<String> {
     let mut rows: Vec<Vec<usize>> = Vec::new();
     let mut sum: usize = 0;
     for line in input.lines() {
-        let row = line.replace("  ", " ");
-        let row = row.trim();
-        let row = row
-            .trim()
-            .split(" ")
-            .filter(|&x| !x.is_empty())
-            .collect::<Vec<&str>>();
+        let row = line.split_whitespace().collect::<Vec<&str>>();
         if row[0] == "+" || row[0] == "*" {
             row.iter().enumerate().for_each(|(i, x)| match *x {
                 "*" => {

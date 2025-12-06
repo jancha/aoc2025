@@ -19,9 +19,18 @@ pub fn bench<T: Fn()>(iterations: usize, test: T) {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::thread;
+    use std::time::Duration;
 
     #[test]
     fn fest() {
         bench(100, || {});
+    }
+
+    #[test]
+    fn test_1sec() {
+        bench(1, || {
+            thread::sleep(Duration::from_secs(1));
+        });
     }
 }

@@ -2,28 +2,23 @@ use aoc::Result;
 use std::cell::RefCell;
 use std::fs;
 use std::rc::Rc;
-
 const MAX_LINE_WIDTH: usize = 141; // memory optimization
-
 enum Mode {
     Search,
     Fill,
 }
-
 #[derive(Debug)]
 struct LightPath {
     pos: usize,
-    level: usize,
     paths: Option<usize>,
     right: Option<Rc<RefCell<LightPath>>>,
     left: Option<Rc<RefCell<LightPath>>>,
 }
 
 impl LightPath {
-    pub fn new(level: usize, pos: usize) -> LightPath {
+    pub fn new(pos: usize) -> LightPath {
         LightPath {
             pos,
-            level,
             paths: None,
             right: None,
             left: None,
@@ -31,19 +26,13 @@ impl LightPath {
     }
     pub fn add_left(&mut self) -> &mut Self {
         if self.left.is_none() {
-            self.left = Some(Rc::new(RefCell::new(LightPath::new(
-                self.level + 1,
-                self.pos - 1,
-            ))));
+            self.left = Some(Rc::new(RefCell::new(LightPath::new(self.pos - 1))));
         }
         self
     }
     pub fn add_right(&mut self) -> &mut Self {
         if self.right.is_none() {
-            self.right = Some(Rc::new(RefCell::new(LightPath::new(
-                self.level + 1,
-                self.pos + 1,
-            ))));
+            self.right = Some(Rc::new(RefCell::new(LightPath::new(self.pos + 1))));
         }
         self
     }
@@ -77,32 +66,25 @@ impl LightPath {
         sub_paths
     }
 }
-
 pub fn solver(file_path: &str) -> Result<String> {
     let input = fs::read_to_string(file_path).expect("Could not read input file");
     let mut len = 0;
-
     const NONE: Option<Rc<RefCell<LightPath>>> = None;
-
     let mut beams: [Option<Rc<RefCell<LightPath>>>; MAX_LINE_WIDTH] = [NONE; MAX_LINE_WIDTH];
     let mut new_beams: [Option<Rc<RefCell<LightPath>>>; MAX_LINE_WIDTH] = [NONE; MAX_LINE_WIDTH];
     let mut mode: Mode = Mode::Search;
     let mut top_light_path: Option<Rc<RefCell<LightPath>>> = None;
-    let mut line_count = 0;
-
     input.lines().for_each(|x| match mode {
         Mode::Search => {
-            line_count += 1;
             len = x.len();
             if let Some((pos, _x)) = x.char_indices().find(|(_pos, c)| *c == 'S') {
                 mode = Mode::Fill;
-                let light_path = Rc::new(RefCell::new(LightPath::new(0, pos)));
+                let light_path = Rc::new(RefCell::new(LightPath::new(pos)));
                 beams[pos] = Some(light_path.clone());
                 top_light_path = Some(light_path.clone());
             }
         }
         Mode::Fill => {
-            line_count += 1;
             x.char_indices()
                 .filter(|(_pos, c)| *c == '^')
                 .for_each(|(pos, _c)| {
@@ -143,6 +125,5 @@ pub fn solver(file_path: &str) -> Result<String> {
 fn main() {
     aoc::main(solver)
 }
-
 #[cfg(test)]
 mod test;

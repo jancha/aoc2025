@@ -70,7 +70,7 @@ D. run all available tests
 |Day5|Puzzle2|  0.076ms     | using range merge would be easier                                       |
 |Day6|Puzzle1|  0.085ms     | split_whitespace is nice way to split by any number of spaces           |
 |Day6|Puzzle2|  0.046ms     |                                                                         |
-|Day6|Puzzle2|  0.046ms     | bonus solution - using transposing. much shorter code, but slower       |
+|Day6|Puzzle2|  0.193ms     | bonus solution - using transposing. much shorter code, but slower       |
 |Day7|Puzzle1|  0.016ms     | filter + foreach is nice way to work on matching iterator elements      |
 |Day7|Puzzle2|  0.084ms     | using DAG - Option<Rc<RefCell<LightBeam>>>> - complex but nice)         |
 |Day7|Puzzle2|  0.034ms     | using GRID - straight foward                                            |

@@ -56,26 +56,28 @@ D. run all available tests
 
 ## Performance
 
-|Day |Puzzle | Average time | Comment                                                                 |
-|----|-------|--------------|-------------------------------------------------------------------------|
-|Day1|Puzzle1|  0.055ms     |                                                                         |
-|Day1|Puzzle2|  0.056ms     | Basic mods                                                              |
-|Day2|Puzzle1|  3.780ms     | is_multiple_of(n) as an alternative to n % 2 == 0 (but % feels faster)  |
-|Day2|Puzzle2| 10.590ms     |                                                                         |
-|Day3|Puzzle1|  0.080ms     |                                                                         |
-|Day3|Puzzle2|  0.090ms     | max_by_key finds LAST max (not first)                                   |
-|Day4|Puzzle1|  0.087ms     |                                                                         |
-|Day4|Puzzle2|  1.900ms     | using optimised rollback for fast recalc                                |
-|Day5|Puzzle1|  0.103ms     |                                                                         |
-|Day5|Puzzle2|  0.076ms     | using range merge would be easier                                       |
-|Day6|Puzzle1|  0.085ms     | split_whitespace is nice way to split by any number of spaces           |
-|Day6|Puzzle2|  0.046ms     |                                                                         |
-|Day6|Puzzle2|  0.193ms     | bonus solution - using transposing. much shorter code, but slower       |
-|Day7|Puzzle1|  0.016ms     | filter + foreach is nice way to work on matching iterator elements      |
-|Day7|Puzzle2|  0.084ms     | using DAG - Option<Rc<RefCell<LightBeam>>>> - complex but nice)         |
-|Day7|Puzzle2|  0.034ms     | using GRID - straight foward                                            |
-|Day8|Puzzle1| 16.300ms     | graphs and more                                                         |
-|Day8|Puzzle2|120.150ms     | graphs and more brutforce (might revisit later)                         |
+|Day |Puzzle    | Average time | Comment                                                                 |
+|----|----------|--------------|-------------------------------------------------------------------------|
+|Day1|Puzzle1   |  0.055ms     |                                                                         |
+|Day1|Puzzle2   |  0.056ms     | Basic mods                                                              |
+|Day2|Puzzle1   |  3.780ms     | is_multiple_of(n) as an alternative to n % 2 == 0 (but % feels faster)  |
+|Day2|Puzzle2   | 10.590ms     |                                                                         |
+|Day3|Puzzle1   |  0.080ms     |                                                                         |
+|Day3|Puzzle2   |  0.090ms     | max_by_key finds LAST max (not first)                                   |
+|Day4|Puzzle1   |  0.087ms     |                                                                         |
+|Day4|Puzzle2   |  1.900ms     | using optimised rollback for fast recalc                                |
+|Day5|Puzzle1   |  0.103ms     |                                                                         |
+|Day5|Puzzle2   |  0.076ms     | using range merge would be easier                                       |
+|Day6|Puzzle1   |  0.085ms     | split_whitespace is nice way to split by any number of spaces           |
+|Day6|Puzzle2   |  0.046ms     |                                                                         |
+|Day6|Puzzle2(2)|  0.193ms     | bonus solution - using transposing. much shorter code, but slower       |
+|Day7|Puzzle1   |  0.016ms     | filter + foreach is nice way to work on matching iterator elements      |
+|Day7|Puzzle2   |  0.084ms     | using DAG - Option<Rc<RefCell<LightBeam>>>> - complex but nice)         |
+|Day7|Puzzle2(2)|  0.034ms     | using GRID - straight foward                                            |
+|Day8|Puzzle1   | 16.300ms     | graphs and more                                                         |
+|Day8|Puzzle1(2)| 11.826ms     | using DSU                                                               |
+|Day8|Puzzle2   |120.150ms     | graphs and more brutforce (might revisit later)                         |
+|Day8|Puzzle2(2)| 11.914ms     | using DSU                                                               |
 
-*Total: 153.4399ms*
+*Total: 40.738ms*
 

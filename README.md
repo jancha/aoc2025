@@ -74,6 +74,8 @@ D. run all available tests
 |Day7|Puzzle1|  0.016ms     | filter + foreach is nice way to work on matching iterator elements      |
 |Day7|Puzzle2|  0.084ms     | using DAG - Option<Rc<RefCell<LightBeam>>>> - complex but nice)         |
 |Day7|Puzzle2|  0.034ms     | using GRID - straight foward                                            |
+|Day8|Puzzle1| 16.300ms     | graphs and more                                                         |
+|Day8|Puzzle2|120.150ms     | graphs and more brutforce (might revisit later)                         |
 
-*Total: 16.0989ms*
+*Total: 153.4399ms*
 

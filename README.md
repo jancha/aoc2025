@@ -80,7 +80,8 @@ D. run all available tests
 |Day8|Puzzle2(2)| 11.914ms     | using DSU                                                               |
 |Day9|Puzzle1   |  0.166ms     | Trivial                                                                 |
 |Day9|Puzzle2   | 21.676s      | Horrendous. Will try to optimize later                                  |
+|Day10|Puzzle1  | 28.082ms     | Bitwise, recurssion and some caching                                    |
 
 
-*Total: 40.904ms (except 9-2)*
+*Total: 68.986ms (except 9-2)*
 + 21.67s for 9-2 :D

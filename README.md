@@ -78,6 +78,9 @@ D. run all available tests
 |Day8|Puzzle1(2)| 11.826ms     | using DSU                                                               |
 |Day8|Puzzle2   |120.150ms     | graphs and more brutforce (might revisit later)                         |
 |Day8|Puzzle2(2)| 11.914ms     | using DSU                                                               |
+|Day9|Puzzle1   |  0.166ms     | Trivial                                                                 |
+|Day9|Puzzle2   | 21.676s      | Horrendous. Will try to optimize later                                  |
 
-*Total: 40.738ms*
 
+*Total: 40.904ms (except 9-2)*
++ 21.67s for 9-2 :D

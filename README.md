@@ -81,7 +81,8 @@ D. run all available tests
 |Day9|Puzzle1   |  0.166ms     | Trivial                                                                 |
 |Day9|Puzzle2   | 21.676s      | Horrendous. Will try to optimize later                                  |
 |Day10|Puzzle1  | 28.082ms     | Bitwise, recurssion and some caching                                    |
+|Day10|Puzzle1  | 97.320ms     | Linear algebra, intro to good_lp					 |
 
+*Total: 166.306ms (except 9-2)*
 
-*Total: 68.986ms (except 9-2)*
 + 21.67s for 9-2 :D

@@ -84,7 +84,9 @@ D. run all available tests
 |Day10|Puzzle2  | 97.320ms     | Linear algebra, intro to good_lp					                     |
 |Day11|Puzzle1  |  1.621ms     | Basic graph walk                                   					 |
 |Day11|Puzzle1  |  5.290ms     | BFS with topology                                  					 |
+|Day12|Puzzle1  |  4.5h        | Using good_lp                                       					 |
+|Day12|Puzzle1-1| 99.91ms      | Using heavily optimised piece placer                 					 |
 
-*Total: 173.217ms (except 9-2)*
+*Total: 273.127ms (except 9-2)*
 
 + 21.67s for 9-2 :D
